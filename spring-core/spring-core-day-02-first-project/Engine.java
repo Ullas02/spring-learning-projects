@@ -1,12 +1,10 @@
-public class Car {
+public class Engine {
 
-    private Engine engine;
-
-    public Car(Engine engine) {
-        this.engine = engine;
+    public Engine(String type) {
+        System.out.println("Engine Type: " + type);
     }
 
-    public void drive() {
-        engine.start();
+    public void start() {
+        System.out.println("Engine started...");
     }
 }
