@@ -3,13 +3,16 @@ package com.example.springcore;
 public class Car {
 
     private final Engine engine;
+    private final MusicSystem musicSystem;
 
-    public Car(Engine engine) {
+    public Car(Engine engine, MusicSystem musicSystem) {
         this.engine = engine;
+        this.musicSystem = musicSystem;
     }
 
     public void drive() {
         engine.start();
+        musicSystem.play();
         System.out.println("Car is moving...");
     }
 }

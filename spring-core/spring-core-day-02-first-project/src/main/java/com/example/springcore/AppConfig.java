@@ -12,7 +12,12 @@ public class AppConfig {
     }
 
     @Bean
+    public MusicSystem musicSystem(){
+        return new MusicSystem();
+    }
+
+    @Bean
     public Car car() {
-        return new Car(engine());
+        return new Car(engine(), musicSystem());
     }
 }
