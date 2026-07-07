@@ -1,4 +1,4 @@
-package model;
+package com.example.springcore.model;
 
 public class MusicSystem {
     public void play() {

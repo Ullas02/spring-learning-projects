@@ -1,12 +1,14 @@
-package config;
+package com.example.springcore.config;
 
-import model.Car;
-import model.Engine;
-import model.MusicSystem;
+import com.example.springcore.model.Car;
+import com.example.springcore.model.Engine;
+import com.example.springcore.model.MusicSystem;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = "com.example.springcore")
 public class AppConfig {
 
     @Bean

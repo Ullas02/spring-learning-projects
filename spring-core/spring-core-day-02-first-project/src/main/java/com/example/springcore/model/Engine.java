@@ -1,5 +1,8 @@
-package model;
+package com.example.springcore.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Engine {
 
     public void start() {
