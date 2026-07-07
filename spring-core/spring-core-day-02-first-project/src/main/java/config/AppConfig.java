@@ -1,5 +1,8 @@
-package com.example.springcore;
+package config;
 
+import model.Car;
+import model.Engine;
+import model.MusicSystem;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

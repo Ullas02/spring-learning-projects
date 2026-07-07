@@ -1,5 +1,7 @@
 package com.example.springcore;
 
+import config.AppConfig;
+import model.Car;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -1,4 +1,4 @@
-package com.example.springcore;
+package model;
 
 public class Engine {
 
