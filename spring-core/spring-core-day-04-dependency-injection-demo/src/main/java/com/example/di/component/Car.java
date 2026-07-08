@@ -1,14 +1,21 @@
 package com.example.di.component;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Car {
 
-    private final Engine engine;
+    private Engine engine;
 
-    public Car(Engine engine) {
+    public Car() {
+        System.out.println("Car created.");
+    }
+
+    @Autowired
+    public void setEngine(Engine engine) {
         this.engine = engine;
+        System.out.println("Engine injected using Setter Injection.");
     }
 
     public void drive() {
