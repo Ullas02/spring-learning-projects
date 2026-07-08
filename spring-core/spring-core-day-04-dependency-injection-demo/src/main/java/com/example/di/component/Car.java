@@ -6,17 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class Car {
 
-    private Engine engine;
-
-    public Car() {
-        System.out.println("Car created.");
-    }
-
     @Autowired
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-        System.out.println("Engine injected using Setter Injection.");
-    }
+    private Engine engine;
 
     public void drive() {
         engine.start();
