@@ -8,10 +8,7 @@ public class PaymentService {
 
     private final PaymentGateway gateway;
 
-    public PaymentService(
-            @Qualifier("upiPayment")
-            PaymentGateway gateway) {
-
+    public PaymentService(PaymentGateway gateway) {
         this.gateway = gateway;
     }
 
