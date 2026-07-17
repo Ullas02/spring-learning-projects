@@ -15,7 +15,7 @@ public class HelloController {
 
         logger.info("GET /hello endpoint invoked");
 
-        return "Hello Spring Boot!";
+        return "Hello Spring Boot with devtools ;)";
     }
 
 }
