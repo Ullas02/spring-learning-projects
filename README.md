@@ -3,7 +3,7 @@
 This repository contains the practical coding projects developed throughout my Spring learning journey.
 
 Each project is built locally using **IntelliJ IDEA**, follows clean coding principles, and demonstrates hands-on implementation of Spring concepts.
-
+<!-- 
 ## 📂 Repository Structure
 
 ```text
@@ -18,6 +18,7 @@ spring-learning-projects/
 ├── docker/
 └── final-projects/
 ```
+-->
 
 ## 🎯 Goals
 
