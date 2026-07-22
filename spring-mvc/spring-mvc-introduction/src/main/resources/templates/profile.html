@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Student Profile</title>
+</head>
+
+<body>
+
+<h2>Student Profile</h2>
+
+<p>
+    Name:
+    <span th:text="${student.name}"></span>
+</p>
+
+<p>
+    Department:
+    <span th:text="${student.department}"></span>
+</p>
+
+<p>
+    CGPA:
+    <span th:text="${student.cgpa}"></span>
+</p>
+
+</body>
+</html>
