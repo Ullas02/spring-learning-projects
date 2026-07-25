@@ -23,13 +23,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Product> createProduct() {
-
-        Product product = new Product(
-                100L,
-                "Monitor",
-                15999.99
-        );
+    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
