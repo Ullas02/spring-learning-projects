@@ -1,32 +1,45 @@
 package com.example.springresthttpmethods.controller;
 
 import com.example.springresthttpmethods.model.Product;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/products")
 public class ProductController {
 
-    @GetMapping("/product")
-    public Product getProduct() {
-        return new Product(
-                1L,
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProduct(
+            @PathVariable Long id) {
+
+        Product product = new Product(
+                id,
                 "Laptop",
                 79999.99
         );
+
+        return ResponseEntity.ok(product);
     }
 
-    @GetMapping("/products")
-    public List<Product> getProducts() {
+    @PostMapping
+    public ResponseEntity<Product> createProduct() {
 
-        return List.of(
-                new Product(1L, "Laptop", 79999.99),
-                new Product(2L, "Mouse", 999.99),
-                new Product(3L, "Keyboard", 2499.00)
+        Product product = new Product(
+                100L,
+                "Monitor",
+                15999.99
         );
 
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(product);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProduct(
+            @PathVariable Long id) {
+
+        return ResponseEntity.noContent().build();
+    }
 }
