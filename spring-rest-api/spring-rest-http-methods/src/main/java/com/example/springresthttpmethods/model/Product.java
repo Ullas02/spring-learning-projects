@@ -1,9 +1,21 @@
 package com.example.springresthttpmethods.model;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+
 public class Product {
 
+    @NotNull(message = "Product id is required.")
     private Long id;
+
+    @NotBlank(message = "Product name is required.")
+    @Size(min = 3, max = 50,
+            message = "Product name must be between 3 and 50 characters.")
     private String name;
+
+    @Positive(message = "Price must be greater than zero.")
     private double price;
 
     public Product() {
